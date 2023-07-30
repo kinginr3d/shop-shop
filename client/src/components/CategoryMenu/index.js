@@ -6,11 +6,8 @@ import { useStoreContext } from "../../utils/GlobalState";
 
 function CategoryMenu({ setCategory }) {
   const [state, dispatch] = useStoreContext();
-
   const { categories } = state;
-  
   const { data: categoryData } = useQuery(QUERY_CATEGORIES);
-
   const handleClick = id => {
     dispatch({
       type: UPDATE_CURRENT_CATEGORY,
